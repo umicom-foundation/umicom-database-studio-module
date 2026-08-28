@@ -72,6 +72,12 @@ target_link_libraries(umicom_database_studio_module PUBLIC
 umicom_apply_warnings(umicom_database_studio_module)
 umicom_apply_sanitizers(umicom_database_studio_module)
 
+include(
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../framework/cmake/UmicomThinApplicationRuntime.cmake")
+umicom_extend_thin_application_runtime(
+    NAME "database-studio"
+    TARGET "umicom_database_studio_module")
+
 if(UMICOM_DATABASE_STUDIO_BUILD_CONSOLE)
     add_executable(umicom-database-studio-console
         src/console/main.c)
