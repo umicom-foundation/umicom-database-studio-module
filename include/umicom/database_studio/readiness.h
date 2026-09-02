@@ -23,8 +23,16 @@
 extern "C" {
 #endif
 
+/**
+ * Provide the database studio readiness report operation used by this module and its
+ * client applications.
+ */
 UmiStatus umi_database_studio_readiness_report(
     UmiApplicationReadinessReport *out_report);
+/**
+ * Provide the database studio readiness next feature operation used by this module and its
+ * client applications.
+ */
 const UmiExperienceFeatureDefinition *umi_database_studio_readiness_next_feature(void);
 
 #ifdef __cplusplus

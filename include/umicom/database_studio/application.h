@@ -25,11 +25,23 @@ extern "C" {
 
 #define UMI_DATABASE_STUDIO_MODULE_API_VERSION 1U
 
+/**
+ * Provide the database studio application id operation used by this module and its client
+ * applications.
+ */
 const char *umi_database_studio_application_id(void);
 
+/**
+ * Provide the database studio application experience operation used by this module and its
+ * client applications.
+ */
 const UmiApplicationExperienceDefinition *
 umi_database_studio_application_experience(void);
 
+/**
+ * Provide the database studio application status operation used by this module and its
+ * client applications.
+ */
 UmiStatus umi_database_studio_application_status(
     UmiApplicationExperienceStatus *out_status);
 

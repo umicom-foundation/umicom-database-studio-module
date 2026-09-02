@@ -16,6 +16,10 @@
 
 #include "umicom/database_studio/workspace_commands.h"
 
+/*
+ * Provide the database studio workspace select layout operation used by this module and
+ * its client applications.
+ */
 UmiStatus umi_database_studio_workspace_select_layout(
     UmiApplicationWorkspaceRuntime *runtime,
     const char *layout_id)
@@ -23,6 +27,10 @@ UmiStatus umi_database_studio_workspace_select_layout(
     return umi_application_workspace_runtime_select_layout(runtime, layout_id);
 }
 
+/*
+ * Provide the database studio workspace activate panel operation used by this module and
+ * its client applications.
+ */
 UmiStatus umi_database_studio_workspace_activate_panel(
     UmiApplicationWorkspaceRuntime *runtime,
     const char *panel_id)
@@ -30,6 +38,10 @@ UmiStatus umi_database_studio_workspace_activate_panel(
     return umi_application_workspace_runtime_activate_panel(runtime, panel_id);
 }
 
+/*
+ * Provide the database studio workspace set context operation used by this module and its
+ * client applications.
+ */
 UmiStatus umi_database_studio_workspace_set_context(
     UmiApplicationWorkspaceRuntime *runtime,
     const char *group_id,
@@ -39,6 +51,10 @@ UmiStatus umi_database_studio_workspace_set_context(
         runtime, group_id, value);
 }
 
+/*
+ * Provide the database studio workspace commands operation used by this module and its
+ * client applications.
+ */
 const UmiApplicationCommandSurface *umi_database_studio_workspace_commands(
     const UmiApplicationWorkspaceRuntime *runtime)
 {
